@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Veggie Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Razorpay JavaScript SDK -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="veggie_logo.jpeg" alt="Fresh Veggie Store Logo" class="logo">
+            <h1>Fresh Veggie Store</h1>
+        </div>
+        <nav>
+            <span class="menu-btn">&#9776;</span>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="video-container">
+                <video id="background-video" autoplay muted loop>
+                    <source src="fresh_veggies_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="content">
+                <h2>Welcome to Fresh Veggie Store</h2>
+                <p>Explore our selection of farm-fresh vegetables delivered to your door.</p>
+                <button onclick="playVideoWithSound()">Play with Sound</button>
+                <button id="muteBtn" onclick="toggleMute()">Unmute</button>
+            </div>
+        </section>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <img src="tomatoes.webp" alt="Fresh Tomatoes">
+                <h3>Fresh Tomatoes</h3>
+                <p class="price">Rs 30/kg</p>
+                <!-- Add to Cart button with Razorpay integration -->
+                <button id="addToCartBtn" onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="carrot.webp" alt="Fresh Carrots">
+                <h3>Crunchy Carrots</h3>
+                <p class="price">Rs 30/kg</p>
+                <button id="addToCartBtn" onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Brinjal.jpeg" alt="Fresh Carrots">
+                <h3>Brinjal</h3>
+                <p class="price">Rs 60/kg</p>
+                <button id="addToCartBtn" onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="cabbage.jpg" alt="Fresh Carrots">
+                <h3>Cabbage</h3>
+                <p class="price">Rs 20/kg</p>
+                <button id="addToCartBtn" onclick="addToCart()">Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                <b>Welcome to Fresh Veggie Store, where farm-fresh meets convenience!</b>
+                We are committed to delivering the freshest vegetables directly from the farm to your table. Join us in embracing a healthy and sustainable lifestyle with the freshest produce.
+                Explore our range and taste the difference with Fresh Veggie Store today!
+            </p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="8f782a9b-796c-4836-bbae-b29d4b6c9918">
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                <button type="submit">Submit Form</button>
+            </form>
+            <div id="formMessage"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fresh Veggie Store. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
