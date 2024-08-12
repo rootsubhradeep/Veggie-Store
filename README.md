@@ -1,6 +1,4 @@
-Here's a sample README file for your GitHub repository "veggie-store":
 
----
 
 # Veggie Store 🌱
 
@@ -89,4 +87,3 @@ Project Link: [https://github.com/rootsubhradeep/veggie-store](https://github.co
 
 ---
 
-Feel free to customize this README as needed for your project!
